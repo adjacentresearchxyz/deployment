@@ -314,6 +314,23 @@
       '';
     };
   };
+  
+  # additional service files
+  #systemd.services.foo = {
+  #  enable = true;
+  #  description = "<description>";
+  #  unitConfig = {
+  #    Type = "simple";
+  #    After = "network.target";
+  #    StartLimitIntervalSec = 0;
+  #  };
+  #  serviceConfig = {
+  #    ExecStart = "<absolute path to binary>";
+  #    Restart = "always";
+  #    RestartSec = 1;
+  #  };
+  #  wantedBy = [ "multi-user.target" ];
+  #};
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
