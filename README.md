@@ -52,9 +52,9 @@ terraform plan
 terraform apply
 ```
 
-## Future Improvements
-- [ ] Docker dashboard and monitoring via `caadvvisor` 
-- [ ] `configuration.nix` via `.env` file
-- [ ] Automatically add new machine into a teleport instance
-- [ ] Add `google cloud`, `ibm cloud`, `digital ocean` deploys
-- [ ] Add alerts via Telegram into the default monitoring dashboards
+#### VSCode Server
+If you want to develop on the host remote `vscode-server` has been added but you will have to enable once in the server with 
+```
+systemctl --user enable auto-fix-vscode-server.service
+systemctl --user start auto-fix-vscode-server.service
+```
