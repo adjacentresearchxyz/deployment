@@ -4,7 +4,14 @@
   imports =
     [
       ./hardware-configuration.nix
+      (fetchTarball {
+	       url = "https://github.com/msteen/nixos-vscode-server/tarball/master";
+         sha256 = "00ki5z2svrih9j9ipl8dm3dl6hi9wgibydsfa7rz2mdw9p0370yl";
+      })
     ];
+
+  # enable vscode-server for remote development
+  services.vscode-server.enable = true;
 
   boot.loader = {
     grub = {
