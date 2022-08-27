@@ -38,6 +38,11 @@ Deployment of `NixOS` via `terraform` with monitoring and log collection
         - `grafana` with system monitoring dashboards
         - `loki` for system log collection 
         - `prometheus` for system statistics collection
+        
+```
+# the following AMI is used
+"22.05.us-east-1.hvm-ebs" = "ami-0223db08811f6fb2d"
+```
 
 ## Deploying 
 ```
