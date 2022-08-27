@@ -5,11 +5,13 @@ terraform {
       version = "~> 4.0"
     }
   }
+  
   backend "remote" {
     organization = "adajcentresearch"
+    hostname = "app.terraform.io"
 
     workspaces {
-      name = "deployment"
+      prefix = "adjacent-"
     }
   }
 }
