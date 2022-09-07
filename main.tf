@@ -5,11 +5,13 @@ terraform {
       version = "~> 4.0"
     }
   }
+
   backend "remote" {
     organization = "adajcentresearch"
+    hostname = "app.terraform.io"
 
     workspaces {
-      name = "deployment"
+      prefix = "adjacent-"
     }
   }
 }
@@ -114,7 +116,6 @@ resource "aws_instance" "machine" {
     host        = self.public_ip
   }
 
- 
   provisioner "remote-exec" {
     inline = [
       "nixos-generate-config", # building base `nixos` config

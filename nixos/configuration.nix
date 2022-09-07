@@ -27,7 +27,7 @@
     };
   };
 
-  networking.hostName = "nixos";
+  networking.hostName = "host-name";
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/New_York";
